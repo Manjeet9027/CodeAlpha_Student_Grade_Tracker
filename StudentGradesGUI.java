@@ -24,9 +24,9 @@ public class StudentGradesGUI extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        // Main panel with background color
+        // Main panel with custom background color (#5D2F77 → RGB 93, 47, 119)
         JPanel panel = new JPanel(new BorderLayout());
-        panel.setBackground(Color.decode("#5D2F77")); // <-- purple background
+        panel.setBackground(new Color(93, 47, 119));
 
         // Table
         String[] columns = {"Student Name", "Grade"};
@@ -34,16 +34,16 @@ public class StudentGradesGUI extends JFrame {
         JTable table = new JTable(tableModel);
         JScrollPane scrollPane = new JScrollPane(table);
 
-        // Table background white for contrast
+        // Table background white for readability
         table.setBackground(Color.WHITE);
         table.setForeground(Color.BLACK);
         table.setGridColor(Color.GRAY);
 
         panel.add(scrollPane, BorderLayout.CENTER);
 
-        // Buttons panel
+        // Buttons panel (same purple background)
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setBackground(Color.decode("#5D2F77")); // match background
+        buttonPanel.setBackground(new Color(93, 47, 119));
 
         JButton addButton = new JButton("➕ Add Student");
         addButton.setBackground(new Color(46, 204, 113)); // green

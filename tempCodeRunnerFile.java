@@ -1,1 +1,0 @@
-Color.decode("#5D2F77"))
